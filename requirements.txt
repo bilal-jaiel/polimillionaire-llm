@@ -1,0 +1,17 @@
+# Notebook (run on Google Colab with a GPU)
+torch
+transformers
+accelerate
+bitsandbytes
+requests
+beautifulsoup4
+numpy
+scipy
+sympy
+matplotlib
+pandas
+openai-whisper
+jiwer
+
+# Decoding sweep analysis
+seaborn
