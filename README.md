@@ -124,7 +124,7 @@ On 20 spoken questions, the three models' transcriptions agree at 92 to 93 % (st
 | Strongest category | Philosophy & Psychology, 50 % |
 | Weakest categories | Maths 4 %, News 7 % |
 
-The 18 greedy configurations (temperature 0, where top-p has no effect) repeat the same decoding setting, yet their scores range from 17 % to 32 %, a spread as large as across all 126 configurations. The effect of the decoding parameters cannot be separated from the run-to-run noise of the game, so the best configuration should not be over-interpreted.
+At temperature 0, where top-p has no effect, the 18 configurations are only three decoding settings (greedy, 2-beam and 3-beam search) each repeated 6 times, yet the repeats of a single setting vary by about 10 points (from 17 % to 32 % overall). The effect of the decoding parameters cannot be separated from the run-to-run noise of the game, so the best configuration should not be over-interpreted.
 
 ## Getting started
 
