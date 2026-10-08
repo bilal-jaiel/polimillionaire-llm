@@ -132,10 +132,10 @@ The notebook targets Google Colab with a GPU (a T4 is enough for the 4-bit model
 
 1. Open [`notebooks/PoliMillionaire.ipynb`](notebooks/PoliMillionaire.ipynb) in Colab (File, Open notebook, GitHub tab, `bilal-jaiel/polimillionaire-llm`) and run the installation cell.
 2. The game client (`millionaire_client`) and server were provided by the course and are not included; the notebook imports the client from Google Drive.
-3. Store the game credentials in Colab *Secrets* as `MILLIONAIRE_USER` and `MILLIONAIRE_PASS`. They are never written in the notebook.
+3. Store the game server URL and credentials in Colab *Secrets* as `MILLIONAIRE_API_URL`, `MILLIONAIRE_USER` and `MILLIONAIRE_PASS`. They are never written in the notebook.
 4. Run the sections in order: model loading, utilities, strategies, then the benchmarks (60 to 90 minutes on a T4 for every category).
 
-For the sweep, set the same two variables with `os.environ[...]` and follow the instructions at the top of `sweep.py`; `plot_sweep.py` reads `sweep_results.csv` locally.
+For the sweep, set the same three variables with `os.environ[...]` and follow the instructions at the top of `sweep.py`; `plot_sweep.py` reads `sweep_results.csv` locally.
 
 ## Repository structure
 

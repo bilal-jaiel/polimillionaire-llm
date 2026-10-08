@@ -4,7 +4,7 @@ Script de reprise du sweep hyperparamètres, tourne sur Colab (GPU).
 UTILISATION :
 1. Upload ce fichier dans : /content/drive/MyDrive/Colab Notebooks/sweep.py
    et définis les identifiants du jeu :
-       import os; os.environ['MILLIONAIRE_USER'] = '...'; os.environ['MILLIONAIRE_PASS'] = '...'
+       import os; os.environ['MILLIONAIRE_API_URL'] = '...'; os.environ['MILLIONAIRE_USER'] = '...'; os.environ['MILLIONAIRE_PASS'] = '...'
 2. Dans une cellule Colab, monte d'abord le Drive :
        from google.colab import drive
        drive.mount('/content/drive')
@@ -33,7 +33,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, logging as hf_logg
 hf_logging.set_verbosity_error()
 
 # ── Config ────────────────────────────────────────────────────────────────────
-API_URL   = "http://131.175.15.22:51111/"
+API_URL   = os.environ["MILLIONAIRE_API_URL"]   # course game server, given by the teaching team
 USERNAME  = os.environ["MILLIONAIRE_USER"]   # set before running, never hard-code credentials
 PASSWORD  = os.environ["MILLIONAIRE_PASS"]
 CSV_PATH  = "/content/drive/MyDrive/Colab Notebooks/sweep_results.csv"
